@@ -1,4 +1,4 @@
-#SingleInstance force ; °°Àº ½ºÅ©¸³Æ®ÀÇ ´ÙÁß ÇÁ·Î¼¼½º·Î ½ÇÇàÀÇ ±İÁö/Çã°¡¼³Á¤
+#SingleInstance force ; ê°™ì€ ìŠ¤í¬ë¦½íŠ¸ì˜ ë‹¤ì¤‘ í”„ë¡œì„¸ìŠ¤ë¡œ ì‹¤í–‰ì˜ ê¸ˆì§€/í—ˆê°€ì„¤ì •
 SetBatchLines, -1
 ListLines, Off
 Process, Priority,, High
@@ -19,8 +19,8 @@ FormatTime, CurrentDateTime1,, yyyyMMddHHmmss  ; It will look like 20050918-1553
 FormatTime, CurrentDateTime2,, yyyyMMdd  ; It will look like 20050918-1553
 pToken := Gdip_StartUp()
 
-vx1 := "" ; °¡·Î
-vy1 := "" ; ¼¼·Î
+vx1 := "" ; ê°€ë¡œ
+vy1 := "" ; ì„¸ë¡œ
 MouseGetpos, vx1, vy1
 clipboard := vx1
 clipboard .= ","
@@ -31,8 +31,8 @@ return
 
 
 =::
-vx2 := "" ; ³Êºñ
-vy2 := "" ; ³ôÀÌ
+vx2 := "" ; ë„ˆë¹„
+vy2 := "" ; ë†’ì´
 MouseGetpos, vx2, vy2
 clipboard .= vx2
 clipboard .= ","
@@ -44,10 +44,10 @@ vy2 := vy2-vy1
 pBitmap := Gdip_BitmapFromScreen(vx1 "|" vy1 "|" vx2 "|" vy2)
 Gdip_SaveBitmapToFile(pBitmap, CurrentDateTime1 ".png")
 msgbox,,, %vx1% %vy1% %vx2% %vy2%,1
-vx1 := vx1-10
-vy1 := vy1-10
-vx2 := vx2+10
-vy2 := vy2+10
+vx1 := vx1-33
+vy1 := vy1-33
+vx2 := vx2+33
+vy2 := vy2+33
 
 
 
@@ -64,7 +64,7 @@ loop 11 ;
 	}
 	sleep, 1111
 }
-goto, start1
+goto, start1 ; ì‹œì‘ì§€ì ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤. ì‹œì‘ì§€ì  í•„ìš”í•œê²ƒ : ì´ˆê¸°í™” ì‘ì—…
 %CurrentDateTime1%:
 
 ),%A_ScriptDir%\macrosave%CurrentDateTime2%.ahk
