@@ -1,4 +1,4 @@
-#SingleInstance force ; 같은 스크립트의 다중 프로세스로 실행의 금지/허가설정
+#SingleInstance force; 같은 규모의 다중 프로세스로 실행의 금지 / 허가 설정  수정용
 SetBatchLines, -1
 ListLines, Off
 Process, Priority,, High
