@@ -8,7 +8,7 @@ CoordMode, Mouse, Screen
 CoordMode, Pixel, Screen
 SetTitleMatchMode, 1
 
-
+; dfgdfgdf
 
 #include Gdip_All.ahk
 
